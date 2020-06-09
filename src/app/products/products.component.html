@@ -1,0 +1,5 @@
+<div class="products-container">
+  <div [@fadeAnimation]="'in'" *ngFor="let product of products" class="product-container">
+    <product (emitProduct) = "onProductAdd($event)" [product]="product"></product>
+  </div>
+</div>

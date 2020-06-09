@@ -1,0 +1,18 @@
+<div class="carts-container">
+    <div [@listItemAnimation]="'in'" *ngFor="let item of groupByProductName;" class="cart-container">
+        <cart-item (emitRemoveItem)="onEmitRemoveItem($event)" [item]="item"></cart-item>
+    </div>
+    <div [@fadeAnimation]="'in'" *ngIf="cartItemList.length; else noCartdata" class="total-amount">
+        <div>
+            <div class="total"><a>Total amount for payment:</a></div>
+            <div><div class="amount-trans">{{totalAmount}}$</div></div>
+        </div>
+    </div>
+
+    <ng-template #noCartdata>
+        <div [@fadeAnimation]="'in'" class="emptycart">
+            Your shopping cart is empty.
+        </div>
+    </ng-template>
+
+</div>

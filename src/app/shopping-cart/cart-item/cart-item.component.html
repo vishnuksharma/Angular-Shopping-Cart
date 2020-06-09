@@ -1,0 +1,34 @@
+<figure class="cart-item white">
+    <div class="row">
+      <div class="col-12"><img src="{{item.imgUrl}}" alt="{{item.name}}"/></div>
+    </div>
+    <div class="item-wrapper">
+        <div class="row item">
+            <div class="col-6">Item Name</div>
+            <div class="col-6">{{item.name}}</div>
+        </div>
+        <div class="row item">
+            <div class="desc-wrapper">
+                <div class="col-6">Short description</div>
+                <div class="col-6">{{ item.description | slice : 0:60 }}...</div>
+            </div>
+        </div>
+        <div class="row item">
+            <div class="col-6">Qty</div>
+            <div class="col-6">{{item.qty}}</div>
+        </div>
+        <div class="row item">
+            <div class="col-6">Price per 1pc</div>
+            <div class="col-6">{{item.price}}$</div>
+        </div>
+        <div class="row item">
+            <div class="col-6">Line total</div>
+            <div class="col-6">{{item.linePrice}}$</div>
+        </div>
+        <div class="row item align-itm">
+            <div class="col-12 remove-btn">
+                <a (click)="removeItem(item)">Remove item</a>
+            </div>
+        </div>
+    </div>
+  </figure>

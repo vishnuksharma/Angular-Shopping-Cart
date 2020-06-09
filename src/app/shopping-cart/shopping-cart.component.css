@@ -1,0 +1,31 @@
+.carts-container {
+    font-family: 'Raleway', Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  .carts-container .total-amount{
+    display: flex;
+    align-items: center;
+    align-content: flex-end;
+    flex-direction: column;
+    font-weight: 800;
+    margin: 10px;
+    font-size: 1.4em;
+  }
+  .carts-container .total a{
+    text-decoration: underline;
+  }
+
+  .carts-container .emptycart {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  @media screen and (min-width: 768px) {
+    .carts-container .total-amount {
+      align-items: flex-end;
+    }
+  }
+ 

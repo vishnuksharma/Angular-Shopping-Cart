@@ -1,0 +1,4 @@
+<header-bar></header-bar>
+<shopping-cart-icon [cartCount]="cartCount" (click)="openShoppingCart()"></shopping-cart-icon>
+<products (shoppingCartList)="getShoppingCartList($event)" *ngIf="!isShoppingCartVisible"></products>
+<shopping-cart (shoppingCartList)="onEmitRemoveCartItem($event)" [shoppingCartList]="shoppingCartList" *ngIf="isShoppingCartVisible"></shopping-cart>
